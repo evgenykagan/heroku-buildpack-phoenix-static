@@ -23,7 +23,7 @@ load_previous_npm_node_versions() {
 download_node() {
   local platform=linux-x64
   echo "Resolving node version $node_version..."
-  local code=$(curl "https://nodejs.org/dist/v17.1.0/node-v17.1.0-linux-x64.tar.gz" -L --silent --fail --retry 5 --retry-max-time 30 -o ${cached_node} --write-out "%{http_code}")
+  local code=$(curl "https://nodejs.org/dist/v16.20.1/node-v16.20.1-linux-x64.tar.gz" -L --silent --fail --retry 5 --retry-max-time 30 -o ${cached_node} --write-out "%{http_code}")
 }
 
 cleanup_old_node() {
