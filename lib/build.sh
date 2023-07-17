@@ -69,9 +69,10 @@ install_npm() {
  # else
     info "Downloading and installing npm $npm_version (replacing version `npm --version`)..."
     cd $build_dir
-    npm install --unsafe-perm --quiet -g npm@$npm_version 2>&1 >/dev/null | indent
+    npm install --unsafe-perm --quiet --legacy-peer-deps -g npm@$npm_version 2>&1 >/dev/null | indent
 #  fi
 }
+
 
 install_yarn() {
   local dir="$1"
